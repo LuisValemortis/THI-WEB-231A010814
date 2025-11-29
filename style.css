@@ -27,9 +27,6 @@ body {
     padding: 0 20px;
 }
 
-/* ------------------------------------------------------------------ */
-/* STYLES FOR bai01.html (Product Landing Page) */
-/* ------------------------------------------------------------------ */
 
 .product-header {
     position: sticky; 
@@ -245,9 +242,6 @@ body {
     font-size: 0.9em;
 }
 
-/* ------------------------------------------------------------------ */
-/* STYLES FOR bai02.html (Guessing Game) */
-/* ------------------------------------------------------------------ */
 
 .game-section {
     padding: 40px;
@@ -360,9 +354,6 @@ body {
         150px 100px 0 #00ffff;
 }
 
-/* ------------------------------------------------------------------ */
-/* NEW STYLES FOR index.html (Homepage) */
-/* ------------------------------------------------------------------ */
 
 .main-header {
     /* Áp dụng lại style của product-header để có hiệu ứng sticky, blur */
@@ -481,9 +472,6 @@ body {
     display: inline-block;
 }
 
-/* ------------------------------------------------------------------ */
-/* MEDIA QUERIES */
-/* ------------------------------------------------------------------ */
 
 @media (max-width: 768px) {
     /* Styles cho bai01.html */
@@ -589,4 +577,5 @@ body {
     .features-grid {
         grid-template-columns: 1fr; 
     }
+
 }
