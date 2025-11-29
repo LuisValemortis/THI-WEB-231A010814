@@ -27,6 +27,10 @@ body {
     padding: 0 20px;
 }
 
+/* ------------------------------------------------------------------ */
+/* STYLES FOR bai01.html (Product Landing Page) */
+/* ------------------------------------------------------------------ */
+
 .product-header {
     position: sticky; 
     top: 0;
@@ -241,76 +245,9 @@ body {
     font-size: 0.9em;
 }
 
-
-
-@media (max-width: 768px) {
-    .product-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-    
-    .nav-list {
-        display: none; 
-        flex-direction: column;
-        position: absolute;
-        top: 60px; 
-        right: 20px;
-        background-color: white;
-        min-width: 200px;
-        border-radius: var(--border-radius);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        padding: 10px 0;
-    }
-    .nav-list li a {
-        padding: 10px 20px;
-        color: var(--text-color);
-    }
-
-    .hamburger-menu {
-        display: block;
-    }
-
-    .hero-grid {
-        grid-template-columns: 1fr; 
-        text-align: center;
-    }
-    .hero-image {
-        order: -1; 
-    }
-    .hero-text {
-        padding-top: 20px;
-    }
-
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-
-    .gallery-content {
-        flex-direction: column;
-    }
-    .thumbnail-container {
-        width: 100%;
-        flex-direction: row;
-        justify-content: center;
-    }
-    .thumbnail {
-        width: 100px; 
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-list {
-    }
-    
-    .hero-text h2 {
-        font-size: 2em;
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr; 
-    }
-}
+/* ------------------------------------------------------------------ */
+/* STYLES FOR bai02.html (Guessing Game) */
+/* ------------------------------------------------------------------ */
 
 .game-section {
     padding: 40px;
@@ -421,4 +358,235 @@ body {
         50px 150px 0 #ff00ff,
         -200px 20px 0 #ffff00,
         150px 100px 0 #00ffff;
+}
+
+/* ------------------------------------------------------------------ */
+/* NEW STYLES FOR index.html (Homepage) */
+/* ------------------------------------------------------------------ */
+
+.main-header {
+    /* Áp dụng lại style của product-header để có hiệu ứng sticky, blur */
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+    padding: 15px 0;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    
+    background-color: var(--glass-color); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-header.scrolled {
+    background-color: var(--primary-color); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: none;
+}
+.main-header.scrolled .logo, .main-header.scrolled .main-nav a {
+    color: white;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 800;
+    color: var(--primary-color);
+    transition: color 0.3s;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s; 
+    border-radius: 8px;
+}
+
+.main-nav li a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--primary-color);
+}
+
+.section-intro {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.section-intro h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background-color: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+    text-align: left;
+}
+
+.description h3 {
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+    font-size: 1.5em;
+}
+
+.description p {
+    margin: 5px 0;
+}
+
+.section-news {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.section-news h2 {
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+/* Cập nhật main-footer (Nếu index.html có footer khác) */
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links a {
+    margin-left: 15px;
+    display: inline-block;
+}
+
+/* ------------------------------------------------------------------ */
+/* MEDIA QUERIES */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+    /* Styles cho bai01.html */
+    .product-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .nav-list {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px; 
+        right: 20px;
+        background-color: white;
+        min-width: 200px;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+    .nav-list li a {
+        padding: 10px 20px;
+        color: var(--text-color);
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr; 
+        text-align: center;
+    }
+    .hero-image {
+        order: -1; 
+    }
+    .hero-text {
+        padding-top: 20px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .gallery-content {
+        flex-direction: column;
+    }
+    .thumbnail-container {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .thumbnail {
+        width: 100px; 
+    }
+
+    /* Styles cho index.html */
+    .profile-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .description {
+        text-align: center;
+    }
+    .main-footer .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .main-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .main-nav ul {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px; 
+        right: 20px;
+        background-color: white;
+        min-width: 200px;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+    .main-nav li a {
+        padding: 10px 20px;
+        color: var(--text-color);
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-list {
+    }
+    
+    .hero-text h2 {
+        font-size: 2em;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr; 
+    }
 }
